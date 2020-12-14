@@ -7,7 +7,7 @@ welcome_message = """
               Welcome to MadLibs!
 Add funny and creative inputs to build fun stories!
   Don't be afraid to get really silly with it!!! 
-    Enter 'EXIT' or 'QUIT' to exit application.
+   Enter 'EXIT' or 'QUIT' to exit application.
   *************************************************
   """
 
@@ -129,9 +129,6 @@ def start_program():
   final_story = merge(template_stripped, list(input_new_list))
   print_output(final_story)
   write_output(final_story)
-
-
-
 
 # Run the program:
 if __name__ == "__main__":
