@@ -7,7 +7,7 @@ welcome_message = """
               Welcome to MadLibs!
 Add funny and creative inputs to build fun stories!
   Don't be afraid to get really silly with it!!! 
-    Enter 'EXIT' or 'QUIT' to exit application.
+   Enter 'EXIT' or 'QUIT' to exit application.
   *************************************************
   """
 
