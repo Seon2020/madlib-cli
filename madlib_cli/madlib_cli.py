@@ -130,9 +130,6 @@ def start_program():
   print_output(final_story)
   write_output(final_story)
 
-
-
-
 # Run the program:
 if __name__ == "__main__":
   start_program()
