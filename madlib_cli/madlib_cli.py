@@ -99,17 +99,6 @@ def write_output(template: str) -> str:
   with open(path_output, "w") as file:
     file.write(template)
 
-def print_output(user_story: str) -> str:
-  """
-  Print out result_message and the story for the user after all inputs have been received.
-
-  Arguments: user_story (The story output)
-
-  Output: The printing of result_message and user_story
-  """ 
-  print(result_message)
-  print(user_story)
-
 def start_program(): 
   """
   This function runs this command line application
@@ -127,7 +116,8 @@ def start_program():
       input_new_list.append(input_new)
   
   final_story = merge(template_stripped, list(input_new_list))
-  print_output(final_story)
+  print(result_message)
+  print(final_story)
   write_output(final_story)
 
 # Run the program:
