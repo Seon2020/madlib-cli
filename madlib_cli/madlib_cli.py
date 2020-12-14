@@ -4,17 +4,17 @@ import re
 
 welcome_message = """
   *************************************************
-              Welcome to MadLibs!
-Add funny and creative inputs to build fun stories!
-  Don't be afraid to get really silly with it!!! 
-   Enter 'EXIT' or 'QUIT' to exit application.
+             Welcome to MadLibs Creator!
+      Get funny and creative with your answers.
+    Don't be afraid to get really silly with it!! 
+     Enter 'EXIT' or 'QUIT' to exit application.
   *************************************************
   """
 
 result_message = """
   *************************************************
-           Thanks for playing MadLibs!
-         You story has been posted below:
+             Thanks for playing MadLibs!
+                Check out your story:
   *************************************************
   """
 
@@ -40,7 +40,7 @@ def word_or_phrase_prompt(type_of_word: str) -> str:
   Output: The user's input (a string) 
   """
   user_prompt = f"Please enter a(n) {type_of_word}: "
-  user_input = input(user_prompt).strip()
+  user_input = input(user_prompt)
   return user_input
 
 def read_template(file_path: str) -> str:
@@ -66,7 +66,7 @@ def parse_template(template: str) -> str:
   Output: The stripped text (template with language parts in brackets removed) and then a separate list of those language parts. 
   """
 
-  pattern = r"{([^{}]+)}"
+  pattern = r"{(['\w\s-]*)}"
   substitution = "{}"
   
   language_parts = list(re.findall(pattern, template))
@@ -131,5 +131,5 @@ def start_program():
   write_output(final_story)
 
 # Run the program:
-if __name__ == "__main__":
+while __name__ == "__main__":
   start_program()
